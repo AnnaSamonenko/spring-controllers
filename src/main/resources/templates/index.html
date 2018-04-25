@@ -1,10 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+<div class="container">
+
+    <div class="navbar navbar-default">
+        <div class="navbar-brand">
+            Keep all your duties in one place
+        </div>
+    </div>
+
+    <table>
+        <tr th:each="task : ${tasks}">
+            <td th:text="${task.id}">1</td>
+            <td th:text="${task.title}"> Title</td>
+            <td th:text="${task.description}">Text ...</td>
+        </tr>
+    </table>
+
+</div>
+
+<div class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container">
+        <p class="navbar-text pull-left">© 2014 - Site Built By Mr. M.
+            <a href="http://tinyurl.com/tbvalid" target="_blank">HTML 5 Validation</a>
+        </p>
+
+        <a href="http://youtu.be/zJahlKPCL9g" class="navbar-btn btn-danger btn pull-right">
+            <span class="glyphicon glyphicon-star"></span>  Subscribe on YouTube</a>
+    </div>
+</div>
 
 </body>
 </html>

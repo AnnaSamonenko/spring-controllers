@@ -25,6 +25,4 @@ public class TaskRepositoryTest {
         Assert.assertTrue(repository.existsById(task.getId()));
     }
 
-
-
 }
